@@ -1,16 +1,12 @@
 package main
 
 import (
-	"breakout/scenes"
+	"breakout/views"
 	"github.com/faiface/pixel/pixelgl"
 )
 
 func run() {
-	gameScene, err := scenes.NewGame()
-	if err != nil {
-		panic(err)
-	}
-	gameScene.EjecutarJuego()
+	views.Run()
 }
 
 func main() {
