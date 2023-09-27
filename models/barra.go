@@ -1,16 +1,15 @@
 package models
 
 import (
-
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/pixelgl"
 )
 
 type Barra struct {
-	Posicion pixel.Vec
-	Tamano   pixel.Vec
+	Posicion  pixel.Vec
+	Tamano    pixel.Vec
 	Velocidad float64
-	Sprite   *pixel.Sprite 
+	Sprite    *pixel.Sprite
 }
 
 func NuevaBarra(posicion pixel.Vec, sprite *pixel.Sprite) *Barra {
@@ -37,12 +36,12 @@ func (b *Barra) Actualizar(win *pixelgl.Window) {
 	if b.Posicion.X < 0 {
 		b.Posicion.X = 0
 	}
-	if b.Posicion.X > win.Bounds().W() - b.Tamano.X {
+	if b.Posicion.X > win.Bounds().W()-b.Tamano.X {
 		b.Posicion.X = win.Bounds().W() - b.Tamano.X
 	}
 }
 
 func (b *Barra) Dibujar(win *pixelgl.Window) {
-	
-	b.Sprite.Draw(win, pixel.IM.Moved(b.Posicion.Add(b.Tamano.Scaled(0.5)))) 
+
+	b.Sprite.Draw(win, pixel.IM.Moved(b.Posicion.Add(b.Tamano.Scaled(0.5))))
 }
