@@ -14,7 +14,7 @@ type Bloque struct {
 func NuevoBloque(posicion pixel.Vec, sprite *pixel.Sprite) *Bloque {
 	return &Bloque{
 		Posicion: posicion,
-		Tamano:   pixel.V(50, 20),  // Estos valores son ejemplos, ajusta según tu sprite.
+		Tamano:   pixel.V(30, 20),  
 		Sprite:   sprite,
 	}
 }
