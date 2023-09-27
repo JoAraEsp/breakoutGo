@@ -1,0 +1,1 @@
+Escena cuya función es solamente para mostrar el fondo.
